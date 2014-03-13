@@ -4,7 +4,9 @@ function initializeDhAxes
 close all
 handles.axes_arm = axes;
 handles.user.jointAngles = [0 90 0 -90 90]; % Home position.
-% End: Setup for this stand alone version that will not go into the GUI.
+%  End : Setup for this stand alone version that will not go into the GUI.
+
+
 
 % Begin: Code that can go into your GUI's opening function.
 clc
@@ -19,7 +21,8 @@ zlabel('z')
 
 % Create vertices for all the patches
 makeLink0(handles.axes_arm, [.5 .5 .5]);  % Doesn't move. No handles needed.
-% Save handles to the patch objects and create a vertices matrix for each.
+% Save handles to the patch objects.
+% Save references to the vertices of each patch, make points 4x1 not 3x1.
 handles.user.link1Patch = makeLink1(handles.axes_arm, [.9 .9 .9]);
 handles.user.link1Vertices = get(handles.user.link1Patch, 'Vertices')';
 handles.user.link1Vertices(4,:) = ones(1, size(handles.user.link1Vertices,2));
@@ -47,14 +50,25 @@ function updateArm(hObject, handles)
 
 % TODO: Use the matrix to transform the patch vertices
 
-% TODO: Update the patches with the new vertices.
-% set(handles.user.link1Patch,'Vertices', link1verticesWRTground(1:3,:)');
+% TODO: Use the A matricies to form the T0_n matricies.
+% T0_1 = 
+% T0_2 = 
+% T0_3 = 
+% T0_4 = 
+% T0_5 = 
+
+% TODO: Use the T matricies to transform the patch vertices
+% link1verticesWRTground = T0_1 * handles.user.link1Vertices;
+% link2verticesWRTground = T0_2 * handles.user.link2Vertices;
+% link3verticesWRTground = T0_3 * handles.user.link3Vertices;
+% link4verticesWRTground = T0_4 * handles.user.link4Vertices;
+% link5verticesWRTground = T0_5 * handles.user.link5Vertices;
 
 
-
+% Optional code (if you want to display the XYZ of the gripper).
 % Update x, y, and z using the gripper (end effector) origin.
 % dhOrigin = [0 0 0 1]';
-% gripperWRTground = T1 * T2 * T3 * T4 * T5 * dhOrigin;
+% gripperWRTground = T0_5 * dhOrigin;
 % fprintf('(%.3f, %.3f, %.3f)\n', gripperWRTground);
 
 end
