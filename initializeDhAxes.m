@@ -46,6 +46,8 @@ end
 
 function updateArm(hObject, handles)
 
+% TODO: Make sure the handles.user.jointAngles values are set.
+
 % TODO: Create the five homogeneous transformation matrices.
 
 % TODO: Use the A matricies to form the T0_n matricies.
@@ -61,6 +63,13 @@ function updateArm(hObject, handles)
 % link3verticesWRTground = T0_3 * handles.user.link3Vertices;
 % link4verticesWRTground = T0_4 * handles.user.link4Vertices;
 % link5verticesWRTground = T0_5 * handles.user.link5Vertices;
+
+% TODO: Update the patches with the new vertices
+% set(handles.user.link1Patch,'Vertices', link1verticesWRTground(1:3,:)');
+% set(handles.user.link2Patch,'Vertices', link2verticesWRTground(1:3,:)');
+% set(handles.user.link3Patch,'Vertices', link3verticesWRTground(1:3,:)');
+% set(handles.user.link4Patch,'Vertices', link4verticesWRTground(1:3,:)');
+% set(handles.user.link5Patch,'Vertices', link5verticesWRTground(1:3,:)');
 
 
 % Optional code (if you want to display the XYZ of the gripper).
