@@ -48,8 +48,6 @@ function updateArm(hObject, handles)
 
 % TODO: Create the five homogeneous transformation matrices.
 
-% TODO: Use the matrix to transform the patch vertices
-
 % TODO: Use the A matricies to form the T0_n matricies.
 % T0_1 = 
 % T0_2 = 
