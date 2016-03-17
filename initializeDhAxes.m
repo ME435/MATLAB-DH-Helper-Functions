@@ -13,7 +13,7 @@ clc
 
 % Prepare the arm axes
 view(handles.axes_arm, [-50 -50 50]);
-axis(handles.axes_arm, [-8 8 -8 8 -3 14.5]);
+axis(handles.axes_arm, [-13 10 -8 8 -3 14.5]);
 grid on
 xlabel('x')
 ylabel('y')
