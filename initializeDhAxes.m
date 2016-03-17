@@ -76,6 +76,6 @@ function updateArm(hObject, handles)
 % Update x, y, and z using the gripper (end effector) origin.
 % dhOrigin = [0 0 0 1]';
 % gripperWRTground = T0_5 * dhOrigin;
-% fprintf('(%.3f, %.3f, %.3f)\n', gripperWRTground);
+% fprintf('(%.3f, %.3f, %.3f)\n', gripperWRTground(1), gripperWRTground(2), gripperWRTground(3));
 
 end
