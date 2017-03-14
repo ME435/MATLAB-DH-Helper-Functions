@@ -3,7 +3,8 @@ function initializeDhAxes
 % Begin: Setup for this stand alone version that will not go into the GUI.
 close all
 handles.axes_arm = axes;
-handles.user.jointAngles = [0 90 0 -90 90]; % Home position.
+%handles.user.jointAngles = [0 0 0 0 0]; % Zero angle position.
+handles.user.jointAngles = [0 90 0 -90 90]; % Servo home position.
 %  End : Setup for this stand alone version that will not go into the GUI.
 
 
