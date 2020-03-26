@@ -13,30 +13,30 @@ app.jointAngles = [0 90 0 -90 90]; % Servo home position.
 clc
 
 % Prepare the arm axes
-view(handles.axes_arm, [-5 -5 5]);
+view(app.axes_arm, [-5 -5 5]);
 axis(app.axes_arm, [-12 12 -8 8 -6 16]);
 set(app.axes_arm, 'Visible', 'off');
 
 % Create vertices for all the patches
-makeLink0(handles.axes_arm, [.5 .5 .5]);  % Doesn't move. No need to save.
+makeLink0(app.axes_arm, [.5 .5 .5]);  % Doesn't move. No need to save.
 % Save references to the vertices of each patch, make points 4x1 not 3x1.
-app.link1Patch = makeLink1(handles.axes_arm, [.9 .9 .9]);
+app.link1Patch = makeLink1(app.axes_arm, [.9 .9 .9]);
 app.link1Vertices = get(app.link1Patch, 'Vertices')';
 app.link1Vertices(4,:) = ones(1, size(app.link1Vertices,2));
 
-app.link2Patch = makeLink2(handles.axes_arm, [.9 .9 .9]);
+app.link2Patch = makeLink2(app.axes_arm, [.9 .9 .9]);
 app.link2Vertices = get(app.link2Patch, 'Vertices')';
 app.link2Vertices(4,:) = ones(1, size(app.link2Vertices,2));
 
-app.link3Patch = makeLink3(handles.axes_arm, [.9 .9 .9]);
+app.link3Patch = makeLink3(app.axes_arm, [.9 .9 .9]);
 app.link3Vertices = get(app.link3Patch, 'Vertices')';
 app.link3Vertices(4,:) = ones(1, size(app.link3Vertices,2));
 
-app.link4Patch = makeLink4(handles.axes_arm, [.9 .9 .9]);
+app.link4Patch = makeLink4(app.axes_arm, [.9 .9 .9]);
 app.link4Vertices = get(app.link4Patch, 'Vertices')';
 app.link4Vertices(4,:) = ones(1, size(app.link4Vertices,2));
 
-app.link5Patch = makeLink5(handles.axes_arm, [.95 .95 0]);
+app.link5Patch = makeLink5(app.axes_arm, [.95 .95 0]);
 app.link5Vertices = get(app.link5Patch, 'Vertices')';
 app.link5Vertices(4,:) = ones(1, size(app.link5Vertices,2));
 % End: Code that can go into your GUI's opening function.
@@ -75,6 +75,6 @@ function updateArm(app)
 % Update x, y, and z using the gripper (end effector) origin.
 % dhOrigin = [0 0 0 1]';
 % gripperWRTground = T0_5 * dhOrigin;
-% fprintf('TODO: Put each individual value into it's own GUI label X = %.3f, Y = %.3f, Z = %.3f)\n', gripperWRTground(1), gripperWRTground(2), gripperWRTground(3));
+% fprintf("TODO: Put each individual value into it's own GUI label X = %.3f, Y = %.3f, Z = %.3f)\n", gripperWRTground(1), gripperWRTground(2), gripperWRTground(3));
 
 end
