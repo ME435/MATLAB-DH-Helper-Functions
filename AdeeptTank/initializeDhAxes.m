@@ -13,21 +13,20 @@ clc
 
 % Prepare the arm axes
 view(app.axes_arm, [-5 -5 5]);
-axis(app.axes_arm, [-12 12 -8 8 -6 16]);
 set(app.axes_arm, 'Visible', 'off');
 
 % Create vertices for all the patches
 makeStlLink("AdeeptL0.stl", app.axes_arm, [.2 .2 .2]);  % Doesn't move. No need to save a handle to it.
 % Save references to the vertices of each patch, make points 4x1 not 3x1.
-app.link1Patch = makeStlLink("AdeeptL1.stl", app.axes_arm, [.9 .9 .9]);
+app.link1Patch = makeStlLink("AdeeptL1.stl", app.axes_arm, [112/255 198/255 210/255]);
 app.link1Vertices = get(app.link1Patch, 'Vertices')';
 app.link1Vertices(4,:) = ones(1, size(app.link1Vertices,2));
 
-app.link2Patch = makeStlLink("AdeeptL2.stl", app.axes_arm, [.9 .9 .9]);
+app.link2Patch = makeStlLink("AdeeptL2.stl", app.axes_arm, [198/255 172/255 20/255]);
 app.link2Vertices = get(app.link2Patch, 'Vertices')';
 app.link2Vertices(4,:) = ones(1, size(app.link2Vertices,2));
 
-app.link3Patch = makeStlLink("AdeeptL3.stl", app.axes_arm, [.9 .9 .9]);
+app.link3Patch = makeStlLink("AdeeptL3.stl", app.axes_arm, [181/255 24/255 35/255]);
 app.link3Vertices = get(app.link3Patch, 'Vertices')';
 app.link3Vertices(4,:) = ones(1, size(app.link3Vertices,2));
 % End: Code that can go into your GUI's opening function.
