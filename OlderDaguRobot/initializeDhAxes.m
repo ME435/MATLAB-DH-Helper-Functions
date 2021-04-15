@@ -17,6 +17,14 @@ view(app.axes_arm, [-5 -5 5]);
 axis(app.axes_arm, [-12 12 -8 8 -6 16]);
 set(app.axes_arm, 'Visible', 'off');
 
+% Once you are in Matlab app design you can try these instead if you like:
+% These properties keep the Axes from automatically resizing (optional)
+% app.axes_arm.XLim = [-160 250];
+% app.axes_arm.YLim = [-250 250];
+% app.axes_arm.ZLim = [-22 22];
+% app.axes_arm.View = [90 -50];
+% app.axes_arm.Visible = 'off';
+
 % Create vertices for all the patches
 makeLink0(app.axes_arm, [.5 .5 .5]);  % Doesn't move. No need to save.
 % Save references to the vertices of each patch, make points 4x1 not 3x1.
