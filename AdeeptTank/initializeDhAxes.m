@@ -11,9 +11,15 @@ app.jointAngles = [0 0 0]; % Start at the zero angle position.
 % Begin: Code that can go into your GUI's StartupFcn.
 clc
 
-% Prepare the arm axes
-view(app.axes_arm, [90 -50]);
-set(app.axes_arm, 'Visible', 'off');
+% Prepare the axes_arm properties
+app.axes_arm.View = [90 -50];
+app.axes_arm.Visible = 'off';
+
+% Once you are in Matlab App Designer you can try these axes_arm properties too.
+% These properties keep the Axes from automatically resizing (optional)
+% app.axes_arm.XLim = [-160 250];
+% app.axes_arm.YLim = [-250 250];
+% app.axes_arm.ZLim = [-22 22];
 
 % Create vertices for all the patches
 makeStlLink("AdeeptL0.stl", app.axes_arm, [.2 .2 .2]);  % Doesn't move. No need to save a handle to it.
