@@ -12,7 +12,7 @@ app.jointAngles = [0 0 0]; % Start at the zero angle position.
 clc
 
 % Prepare the arm axes
-view(app.axes_arm, [-5 -5 5]);
+view(app.axes_arm, [90 -50]);
 set(app.axes_arm, 'Visible', 'off');
 
 % Create vertices for all the patches
