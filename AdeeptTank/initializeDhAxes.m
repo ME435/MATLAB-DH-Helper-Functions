@@ -8,7 +8,7 @@ app.jointAngles = [0 0 0]; % Start at the zero angle position.
 
 
 
-% Begin: Code that can go into your GUI's StartUpFunc.
+% Begin: Code that can go into your GUI's StartupFcn.
 clc
 
 % Prepare the arm axes
