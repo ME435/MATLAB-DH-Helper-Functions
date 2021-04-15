@@ -37,21 +37,21 @@ end
 
 function updateArm(app)
 
-% TODO: Create the A homogeneous transformation matrices.
+% TODO: Create the A homogeneous transformation matrices for the given jointAngles.
 
-% TODO: Use the A matricies to form the T0_n matricies.
+% TODO: Use the current A matricies to form the T0_n matricies.
 % T0_1 = 
 % T0_2 = 
 % T0_3 = 
 
-% TODO: Use the T matricies to transform the patch vertices
-% link1verticesWRTground = T0_1 * app.link1Vertices;
-% link2verticesWRTground = T0_2 * app.link2Vertices;
-% link3verticesWRTground = T0_3 * app.link3Vertices;
+% TODO: Use the current T matricies to transform the original patch vertices
+% link1VerticesWRTground = T0_1 * app.link1Vertices;
+% link2VerticesWRTground = T0_2 * app.link2Vertices;
+% link3VerticesWRTground = T0_3 * app.link3Vertices;
 
-% TODO: Update the patches with the new vertices
-% set(app.link1Patch,'Vertices', link1verticesWRTground(1:3,:)');
-% set(app.link2Patch,'Vertices', link2verticesWRTground(1:3,:)');
-% set(app.link3Patch,'Vertices', link3verticesWRTground(1:3,:)');
+% TODO: Update the patches with the newly transformed vertices
+% set(app.link1Patch,'Vertices', link1VerticesWRTground(1:3,:)');
+% set(app.link2Patch,'Vertices', link2VerticesWRTground(1:3,:)');
+% set(app.link3Patch,'Vertices', link3VerticesWRTground(1:3,:)');
 
 end
